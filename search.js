@@ -25,4 +25,4 @@ function successFunc(data) {
     })
 }
 
-Sheetsu.read("https://sheetsu.com/apis/v1.0bu/99c64680839b", {}, successFunc);
+Sheetsu.read("https://sheetsu.com/apis/v1.0su/292ae7b1e810", {}, successFunc);
