@@ -8,4 +8,4 @@ function successFunc(data) {
     document.getElementById("thirdlink").innerHTML = data[data.length-3].Link;
     document.getElementById("thirdreason").innerHTML = data[data.length-3].Reason;
   }
-  Sheetsu.read("https://sheetsu.com/apis/v1.0su/03404dcef980", {}, successFunc);
+  Sheetsu.read("https://sheetsu.com/apis/v1.0bu/e777e0f66d85", {}, successFunc);
