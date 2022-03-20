@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles2.css">
+        <script src="https://script.sheetsu.com/"></script>
+        <title>second page</title>
+
+        <style>
+
+            .row {
+                display: flex;
+            }
+
+            .column {
+                flex: 50%;
+                padding: 10px;
+            }
+
+            input[type=text], select {
+                width: 100%;
+                padding: 12px 20px;
+                margin: 10px 0px 15px 0px;
+                display: inline-block;
+                border: 1px solid rgb(222, 222, 222);
+                border-radius: 6px;
+                box-sizing: border-box;
+                font-family: "Source Sans Pro", sans-serif;
+            }
+
+            input[type=submit] {
+                width: 100%;
+                background-color: #019eec;
+                color: white;
+                font-size: 16px;
+                padding: 14px 20px;
+                margin-top: 30px;
+                border: none;
+                border-radius: 10px;
+                cursor: pointer;
+            }
+
+            input[type=submit]:hover {
+                background-color: #04a9fc;
+            }
+
+            div {
+                border-radius: 5px;
+                padding: 10px;
+                margin-top: 0px;
+            }
+
+        </style>
+    </head>
+    <body>
+
+        <header style="background-color:#019eec;">
+            <h1 id="headertxt">Scam Link Detector</h1>
+        </header>
+
+        <div class="row">
+            <div class="column">
+
+                <h1 id="columnheader">Report</h1>
+
+                <p id="columndescr">Report any suspicious links trough this form to warn other users</p>
+                
+                <form id="form" action="https://script.google.com/macros/s/AKfycbzvp4Scup2rWAoFeLlZ4qU_UZuowx1uYRzo6RznJJ7nkR4YvcRw4sjlLQxp3q4YrSBDzA/exec" method="post">
+                    <label for="link">Link</label>
+                    <br>
+                    <input type="text" id="link" name="Link" placeholder="Enter full link..." required>
+                    
+                    <br>
+                    <label for="reason">Reason</label>
+                    <br>
+                    <select id="reason" name="Reason" required>
+                        <option value="" disabled selected>Select your option</option>
+                        <option value="Not official link">Not official link</option>
+                        <option value="Fake project">Fake project</option>
+                        <option value="Suspicious">Suspicious</option>
+                        <option value="Other">Other</option>
+                    </select>
+    
+                    <br>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+    
+            <div class="column">
+
+                <h1 id="columnheader">Check</h1>
+
+                <p id="columndescr">Check here to see if someone reported a specific link</p>
+
+                <div class="search-wrapper">
+                    <input type="search" id="search" placeholder="Search..." data-search>
+                </div>
+
+                <div id="results" class="searchresult" search-result-container>
+                    <template searchresult>
+                        <div class="card">
+                            <div class="header" data-header></div>
+                            <div class="body" data-body></div>
+                        </div>
+                    </template>
+                </div>
+                <script src="search.js"></script>
+            </div>
+        </div>
+
+    </body>
+</html>
