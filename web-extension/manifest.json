@@ -1,0 +1,23 @@
+{
+    "manifest_version": 2,
+    "name": "Scam Link Protector",
+    "description": "Protects you from possible scams",
+    "version": "1.0",
+    "icons": {
+        "16": "/images/slp16.png",
+        "48": "/images/slp48.png",
+        "128": "/images/slp128.png"
+    },
+    "background": {
+        "page": "background.html"
+    },
+    "options_page": "./options.html",
+    "browser_action": {
+        "default_popup": "popup.html"
+    },
+    "permissions": [
+        "tabs",
+        "https://www.google.com/*",
+        "notifications"
+    ]
+}

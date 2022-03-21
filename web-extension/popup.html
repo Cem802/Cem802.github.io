@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <link rel="stylesheet" href="mystyles.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Popup</title>
+        
+
+        <style>
+
+            .column {
+                float: left;
+                padding: 0px;
+            }
+
+            .left {
+                width: 95%;
+            }
+
+            .right {
+                width: 5%;
+            }
+
+            .row:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+
+            input[type=text], select {
+                width: 100%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+                font-family: "Source Sans Pro", sans-serif;
+            }
+
+            input[type=submit] {
+                width: 100%;
+                background-color: #019eec;
+                color: white;
+                padding: 14px 20px;
+                margin: 8px 0;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+
+            input[type=submit]:hover {
+                background-color: #04a9fc;
+            }
+
+            div {
+                border-radius: 5px;
+                background-color: #ffffff;
+                padding: 10px;
+                margin-top: 0px;
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <div class="row">
+            <div class="column left">
+                <h1>Scam Link Protector</h1>
+            </div>
+            <div id="icon" class="column right">
+                <a href="https://cem802.github.io/index.html" target="_blank">
+                    <img align="right" height="16" width="16" src="/images/external-link-line.png" />
+                </a>
+            </div>
+        </div>
+
+        <p id="text">This Link hasn't been reported yet. If you want to report it, use the form below.</p>
+        
+        <div>
+            <form id="form" action="https://script.google.com/macros/s/AKfycbzvp4Scup2rWAoFeLlZ4qU_UZuowx1uYRzo6RznJJ7nkR4YvcRw4sjlLQxp3q4YrSBDzA/exec" method="post">
+                <label for="link">Link</label>
+                <input type="text" id="link" name="Link" placeholder="Enter full link..." required>
+                
+                <label for="reason">Reason</label>
+                <select id="reason" name="Reason" required>
+                    <option value="" disabled selected>Select your option</option>
+                    <option value="Not official link">Not official link</option>
+                    <option value="Fake project">Fake project</option>
+                    <option value="Duspicious">Suspicious</option>
+                    <option value="Other">Other</option>
+                  </select>
+
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+        <script type="module" src="gsheet.js"></script>
+    </body>
+</html>
