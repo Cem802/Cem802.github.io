@@ -4,7 +4,7 @@
     "description": "Protects you from possible scams",
     "version": "1.0",
     "icons": {
-        "16": "/images/slp16.png",
+        "16": "https://user-images.githubusercontent.com/85410125/159193395-52ce8b70-b494-4ea2-9857-714c69a840db.png",
         "48": "/images/slp48.png",
         "128": "/images/slp128.png"
     },
